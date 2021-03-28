@@ -1,6 +1,11 @@
 from PIL import Image, ImageFilter
 
 img = Image.open('./Pokedex/pikachu.jpg')
-converted_img = img.convert('L')
 
-converted_img.save("grey.png", "png")
+
+box = (100, 100, 200, 200)
+region = img.crop(box)
+
+
+region.save("region.png", 'png')
+
