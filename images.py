@@ -1,11 +1,7 @@
 from PIL import Image, ImageFilter
 
-img = Image.open('./Pokedex/pikachu.jpg')
+img  = Image.open('./spacex.jpg')
 
+img.thumbnail((400, 400))
 
-box = (100, 100, 200, 200)
-region = img.crop(box)
-
-
-region.save("region.png", 'png')
-
+img.save("newSpacex01.jpg")
